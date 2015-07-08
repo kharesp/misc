@@ -30,7 +30,8 @@ class NewVisitorTestCase(unittest.TestCase):
 		table=self.browser.find_element_by_id('id_list_table')
 		rows=table.find_elements_by_tag_name('tr')
 		self.assertTrue(
-			any(row.text=="Item 1" for row in rows))
+			any(row.text=="Item 1" for row in rows),
+			"New item did not appear in table")
 		
 		#check if there is another input box for adding more To-Do items 
 		self.fail('Finish the test')
